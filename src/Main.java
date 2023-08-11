@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class Main {
         int ansver = 0;
         input = input.replaceAll(" ","");
         String[] parts = input.split("\\W");
-        input = input.replace(parts[0], "");
+        input = input.replaceFirst(parts[0], "");
         input = input.replace(parts[1], "");
         if (matches("\\d+", parts[0]))
              return String.valueOf(calcArab(Integer.parseInt(parts[0]),Integer.parseInt(parts[1]),input));
